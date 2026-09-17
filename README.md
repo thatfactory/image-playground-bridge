@@ -11,9 +11,22 @@
 
 # ImageForgeKit
 
-ImageForgeKit is a reusable Apple-platform integration layer for the system-managed Image Playground experience. It will centralize availability checks, presentation wiring, cancellation and result handling, and safe transfer of temporary generated files into host-owned storage.
+ImageForgeKit is a reusable Apple-platform integration layer for the system-managed Image Playground experience. It centralizes availability checks, concept setup, SwiftUI presentation wiring, cancellation, and temporary result handling while leaving persistence to the host application.
 
-The package is currently a bootstrapped foundation. Its public API is intentionally limited to a namespace while the first consumer establishes the smallest useful contract.
+```swift
+let request = ImageForgeRequest(concepts: [.text("a small red house")])
+
+content
+    .imageForgeSheet(
+        isPresented: $isPresented,
+        request: request,
+        onCompletion: { result in
+            // Copy result.temporaryURL into host-owned storage here.
+        }
+    )
+```
+
+The presentation API is available on Apple platforms that support Image Playground. The package also compiles on tvOS so shared multiplatform application targets can resolve it, while ``ImageForgeAvailability/current`` reports unavailable there.
 
 ## Documentation
 
