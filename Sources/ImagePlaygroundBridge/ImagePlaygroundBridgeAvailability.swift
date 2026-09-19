@@ -5,7 +5,7 @@ import Foundation
 #endif
 
 /// Describes whether the current device can present Image Playground.
-public enum ImageForgeAvailability: Equatable, Sendable {
+public enum ImagePlaygroundBridgeAvailability: Equatable, Sendable {
     /// Image Playground can be presented.
     case available
 

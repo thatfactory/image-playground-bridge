@@ -43,16 +43,16 @@ jobs:
         run: |
           set -euo pipefail
           swift package --allow-writing-to-directory ./public generate-documentation \
-            --target ImageForgeKit \
+            --target ImagePlaygroundBridge \
             --disable-indexing \
             --output-path ./public \
             --transform-for-static-hosting \
-            --hosting-base-path imageforgekit
+            --hosting-base-path image-playground-bridge
 
           cat > ./public/index.html <<'INDEX'
           <!doctype html>
-          <meta http-equiv="refresh" content="0; url=/imageforgekit/documentation/imageforgekit/" />
-          <title>ImageForgeKit Documentation</title>
+          <meta http-equiv="refresh" content="0; url=/image-playground-bridge/documentation/imageplaygroundbridge/" />
+          <title>ImagePlaygroundBridge Documentation</title>
           INDEX
 
       - name: Upload Pages Artifact

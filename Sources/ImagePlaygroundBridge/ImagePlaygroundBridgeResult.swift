@@ -1,7 +1,7 @@
 import Foundation
 
 /// A generated image accepted by the user.
-public struct ImageForgeResult: Equatable, Sendable {
+public struct ImagePlaygroundBridgeResult: Equatable, Sendable {
     /// A temporary file URL that the host must copy before returning from its callback.
     public let temporaryURL: URL
 

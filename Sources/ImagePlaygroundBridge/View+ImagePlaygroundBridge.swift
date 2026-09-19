@@ -3,32 +3,32 @@
     import SwiftUI
 
     extension View {
-        /// Presents Image Playground and maps its temporary result into ImageForgeKit values.
+        /// Presents Image Playground and maps its temporary result into ImagePlaygroundBridge values.
         ///
-        /// Copy ``ImageForgeResult/temporaryURL`` into host-owned storage synchronously from
+        /// Copy ``ImagePlaygroundBridgeResult/temporaryURL`` into host-owned storage synchronously from
         /// `onCompletion`. The system may remove the temporary file after the callback returns.
-        public func imageForgeSheet(
+        public func imagePlaygroundBridgeSheet(
             isPresented: Binding<Bool>,
-            request: ImageForgeRequest,
-            onCompletion: @escaping (ImageForgeResult) -> Void,
+            request: ImagePlaygroundBridgeRequest,
+            onCompletion: @escaping (ImagePlaygroundBridgeResult) -> Void,
             onCancellation: (() -> Void)? = nil
         ) -> some View {
             imagePlaygroundSheet(
                 isPresented: isPresented,
                 concepts: request.concepts.map(\.imagePlaygroundConcept),
                 onCompletion: { temporaryURL in
-                    ImageForgeLogging.emit(.completed)
-                    onCompletion(ImageForgeResult(temporaryURL: temporaryURL))
+                    ImagePlaygroundBridgeLogging.emit(.completed)
+                    onCompletion(ImagePlaygroundBridgeResult(temporaryURL: temporaryURL))
                 },
                 onCancellation: {
-                    ImageForgeLogging.emit(.cancelled)
+                    ImagePlaygroundBridgeLogging.emit(.cancelled)
                     onCancellation?()
                 }
             )
         }
     }
 
-    extension ImageForgeConcept {
+    extension ImagePlaygroundBridgeConcept {
         fileprivate var imagePlaygroundConcept: ImagePlaygroundConcept {
             switch self {
             case .extracted(let text, let title):

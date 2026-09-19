@@ -1,8 +1,8 @@
-# ImageForgeKit
+# ImagePlaygroundBridge
 
 ## Context
 
-ImageForgeKit integrates Apple's system-managed Image Playground experience. Read [README.md](README.md) and the DocC catalog before changing public behavior.
+ImagePlaygroundBridge integrates Apple's system-managed Image Playground experience. Read [README.md](README.md) and the DocC catalog before changing public behavior.
 
 Keep application persistence, host media storage, and product-specific UI outside the package. Limit main-actor isolation to framework presentation boundaries and keep portable values `Sendable`.
 
@@ -96,9 +96,9 @@ Replace these examples with exact repository paths:
 
 | Role | Physical folder |
 |---|---|
-| Package sources | `Sources/ImageForgeKit/` |
-| DocC catalog | `Sources/ImageForgeKit/ImageForgeKit.docc/` |
-| Unit tests | `Tests/ImageForgeKitTests/` |
+| Package sources | `Sources/ImagePlaygroundBridge/` |
+| DocC catalog | `Sources/ImagePlaygroundBridge/ImagePlaygroundBridge.docc/` |
+| Unit tests | `Tests/ImagePlaygroundBridgeTests/` |
 
 ## Stack
 

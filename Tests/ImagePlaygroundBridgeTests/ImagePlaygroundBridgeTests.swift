@@ -1,16 +1,16 @@
 import Foundation
 import Testing
 
-@testable import ImageForgeKit
+@testable import ImagePlaygroundBridge
 
 @Test("The package namespace is available")
 func packageNamespaceIsAvailable() {
-    _ = ImageForgeKit.self
+    _ = ImagePlaygroundBridge.self
 }
 
 @Test("Requests preserve portable concepts")
 func requestsPreservePortableConcepts() {
-    let request = ImageForgeRequest(
+    let request = ImagePlaygroundBridgeRequest(
         concepts: [
             .text("a small red house"),
             .extracted(text: "A welcoming home", title: "House"),
@@ -29,11 +29,11 @@ func requestsPreservePortableConcepts() {
 func resultsPreserveTemporaryURL() {
     let url = URL(filePath: "/tmp/generated-image")
 
-    #expect(ImageForgeResult(temporaryURL: url).temporaryURL == url)
+    #expect(ImagePlaygroundBridgeResult(temporaryURL: url).temporaryURL == url)
 }
 
 @Test("Logging messages do not contain generated content")
 func loggingMessagesArePrivacySafe() {
-    #expect(ImageForgeLogging.Event.cancelled.message == "🎨 playground | result=cancelled")
-    #expect(ImageForgeLogging.Event.completed.message == "🎨 playground | result=completed")
+    #expect(ImagePlaygroundBridgeLogging.Event.cancelled.message == "🎨 playground | result=cancelled")
+    #expect(ImagePlaygroundBridgeLogging.Event.completed.message == "🎨 playground | result=completed")
 }
