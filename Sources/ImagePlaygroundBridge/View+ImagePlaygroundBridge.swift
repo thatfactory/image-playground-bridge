@@ -1,6 +1,6 @@
 #if canImport(ImagePlayground) && !os(tvOS)
     import ImagePlayground
-    import SwiftUI
+    public import SwiftUI
 
     extension View {
         /// Presents Image Playground and maps its temporary result into ImagePlaygroundBridge values.
