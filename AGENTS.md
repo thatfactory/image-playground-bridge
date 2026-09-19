@@ -111,3 +111,11 @@ Replace these examples with exact repository paths:
 
 - Use Apple Image Playground APIs only on their supported platforms and preserve runtime capability checks.
 - Do not introduce headless generation, persistence, or provider abstractions without a concrete consumer requirement.
+
+<!-- BEGIN THATFACTORY RUNTIME OBSERVABILITY CONTRACT v1 -->
+## Runtime Observability
+
+Treat privacy-safe runtime observability as part of implementing or changing stateful, asynchronous, fallible, or lifecycle-oriented behavior. Identify the meaningful success, failure, cancellation, recovery, and state-transition boundaries before handoff, and emit concise AppLogger events owned by the artifact that implements them. Dependency declaration or target linkage alone does not satisfy this requirement.
+
+Every ThatFactory package log starts with its canonical emoji and uses its own stable subsystem. Never log credentials, account or record identifiers, share URLs, captured content, images, or other user-generated values as public metadata. Keep pure values and utilities silent when they have no meaningful diagnostic event; record that deliberate decision in the implementation handoff instead of adding initializer or property-access noise. Follow [Logging](AgentGuidelines/Guidelines/Logging.md) for ownership, privacy, severity, message design, and tests.
+<!-- END THATFACTORY RUNTIME OBSERVABILITY CONTRACT v1 -->

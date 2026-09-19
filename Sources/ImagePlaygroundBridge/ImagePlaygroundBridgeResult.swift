@@ -1,4 +1,4 @@
-import Foundation
+public import Foundation
 
 /// A generated image accepted by the user.
 public struct ImagePlaygroundBridgeResult: Equatable, Sendable {
