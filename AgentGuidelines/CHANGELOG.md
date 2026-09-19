@@ -2,6 +2,36 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.0.33] - 2026-09-19
+
+### Added
+
+- Added a Swift Package compiler-settings baseline aligned with the applicable Xcode project warning, Swift language-mode, concurrency, and upcoming-feature policies.
+- Added completion-audit enforcement for compiler settings in checked-in Swift packages.
+
+### Changed
+
+- Required future Xcode compiler-policy changes to evaluate and update Swift Package Manager parity when an equivalent package setting is applicable.
+
+## [0.0.32] - 2026-09-13
+
+### Changed
+
+- Made runtime observability an explicit consumer contract for changed stateful, asynchronous, fallible, and lifecycle behavior, while preserving silence for pure values and utilities without meaningful diagnostic boundaries.
+- Extended the completion audit to require useful privacy-safe AppLogger outcome coverage instead of accepting dependency declaration and target linkage alone.
+
+## [0.0.31] - 2026-09-13
+
+### Added
+
+- Added a least-privilege GitHub App authentication pattern for workflows that resolve private sibling repositories, including short-lived read-only tokens, process-scoped Git configuration, exact repository selection, and fork pull-request and self-hosted-runner security boundaries.
+
+## [0.0.30] - 2026-09-12
+
+### Changed
+
+- Prohibited dedicated License headings and conventional standalone license-description paragraphs in Swift package READMEs while retaining root license files and standard license badges.
+
 ## [0.0.29] - 2026-09-12
 
 ### Added
