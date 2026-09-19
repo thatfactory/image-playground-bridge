@@ -1,8 +1,8 @@
 import AppLogger
 
-enum ImageForgeLogging {
+enum ImagePlaygroundBridgeLogging {
     static let emoji = "🎨"
-    static let subsystem = "com.thatfactory.imageforgekit"
+    static let subsystem = "com.thatfactory.imageplaygroundbridge"
 
     enum Event: Equatable {
         case cancelled

@@ -1,8 +1,12 @@
 # Changelog
 
-All notable changes to ImageForgeKit are documented here.
+All notable changes to ImagePlaygroundBridge are documented here.
 
 ## Unreleased
+
+### Changed
+
+- Rename the package, product, module, public API, documentation, and repository-facing links to ImagePlaygroundBridge.
 
 ### Added
 

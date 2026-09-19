@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "ImageForgeKit",
+    name: "ImagePlaygroundBridge",
     platforms: [
         .iOS(.v26),
         .macOS(.v26),
@@ -12,8 +12,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ImageForgeKit",
-            targets: ["ImageForgeKit"]
+            name: "ImagePlaygroundBridge",
+            targets: ["ImagePlaygroundBridge"]
         )
     ],
     dependencies: [
@@ -22,14 +22,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ImageForgeKit",
+            name: "ImagePlaygroundBridge",
             dependencies: [
                 .product(name: "AppLogger", package: "applogger")
             ]
         ),
         .testTarget(
-            name: "ImageForgeKitTests",
-            dependencies: ["ImageForgeKit"]
+            name: "ImagePlaygroundBridgeTests",
+            dependencies: ["ImagePlaygroundBridge"]
         ),
     ]
 )
