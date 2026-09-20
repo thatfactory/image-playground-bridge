@@ -1,8 +1,8 @@
-# ImagePlaygroundBridge
+# IntelligenceBridge
 
 ## Context
 
-ImagePlaygroundBridge integrates Apple's system-managed Image Playground experience. Read [README.md](README.md) and the DocC catalog before changing public behavior.
+IntelligenceBridge provides focused integrations with Apple intelligence capabilities. Image Playground is its first capability; read [README.md](README.md) and the DocC catalog before changing public behavior.
 
 Keep application persistence, host media storage, and product-specific UI outside the package. Limit main-actor isolation to framework presentation boundaries and keep portable values `Sendable`.
 
@@ -96,9 +96,9 @@ Replace these examples with exact repository paths:
 
 | Role | Physical folder |
 |---|---|
-| Package sources | `Sources/ImagePlaygroundBridge/` |
-| DocC catalog | `Sources/ImagePlaygroundBridge/ImagePlaygroundBridge.docc/` |
-| Unit tests | `Tests/ImagePlaygroundBridgeTests/` |
+| Package sources | `Sources/IntelligenceBridge/` |
+| DocC catalog | `Sources/IntelligenceBridge/IntelligenceBridge.docc/` |
+| Unit tests | `Tests/IntelligenceBridgeTests/` |
 
 ## Stack
 
@@ -109,6 +109,7 @@ Replace these examples with exact repository paths:
 
 ## Local specialization
 
+- IntelligenceBridge's canonical logging emoji is 🧠, and its logging subsystem is `com.thatfactory.intelligencebridge`.
 - Use Apple Image Playground APIs only on their supported platforms and preserve runtime capability checks.
 - Do not introduce headless generation, persistence, or provider abstractions without a concrete consumer requirement.
 

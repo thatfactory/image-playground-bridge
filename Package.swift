@@ -12,7 +12,7 @@ let strictSwiftSettings: [SwiftSetting] = [
 ]
 
 let package = Package(
-    name: "ImagePlaygroundBridge",
+    name: "IntelligenceBridge",
     platforms: [
         .iOS(.v26),
         .macOS(.v26),
@@ -21,8 +21,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "ImagePlaygroundBridge",
-            targets: ["ImagePlaygroundBridge"]
+            name: "IntelligenceBridge",
+            targets: ["IntelligenceBridge"]
         )
     ],
     dependencies: [
@@ -31,14 +31,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ImagePlaygroundBridge",
+            name: "IntelligenceBridge",
             dependencies: [
                 .product(name: "AppLogger", package: "applogger")
             ]
         ),
         .testTarget(
-            name: "ImagePlaygroundBridgeTests",
-            dependencies: ["ImagePlaygroundBridge"]
+            name: "IntelligenceBridgeTests",
+            dependencies: ["IntelligenceBridge"]
         ),
     ]
 )

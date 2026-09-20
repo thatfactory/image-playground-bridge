@@ -17,11 +17,11 @@
                 isPresented: isPresented,
                 concepts: request.concepts.map(\.imagePlaygroundConcept),
                 onCompletion: { temporaryURL in
-                    ImagePlaygroundBridgeLogging.emit(.completed)
+                    IntelligenceBridgeLogging.emit(.completed)
                     onCompletion(ImagePlaygroundBridgeResult(temporaryURL: temporaryURL))
                 },
                 onCancellation: {
-                    ImagePlaygroundBridgeLogging.emit(.cancelled)
+                    IntelligenceBridgeLogging.emit(.cancelled)
                     onCancellation?()
                 }
             )
