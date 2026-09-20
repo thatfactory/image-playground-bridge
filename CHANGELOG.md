@@ -1,6 +1,12 @@
 # Changelog
 
-All notable changes to ImagePlaygroundBridge are documented here.
+All notable changes to IntelligenceBridge are documented here.
+
+## Unreleased
+
+### Changed
+
+- Rename the package, product, module, documentation, repository-facing links, logging subsystem, and canonical emoji to IntelligenceBridge 🧠 while preserving the Image Playground-specific public API.
 
 ## 0.1.1 — 2026-09-19
 
@@ -10,8 +16,7 @@ All notable changes to ImagePlaygroundBridge are documented here.
 - Declared Swift 6, warnings as errors, and the required upcoming language features for every package target.
 - Made imports and existential types explicit where required by the stricter compiler policy without intentionally changing runtime behavior.
 
-
-## Unreleased
+## 0.1.0 — 2026-09-19
 
 ### Changed
 

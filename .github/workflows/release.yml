@@ -43,16 +43,16 @@ jobs:
         run: |
           set -euo pipefail
           swift package --allow-writing-to-directory ./public generate-documentation \
-            --target ImagePlaygroundBridge \
+            --target IntelligenceBridge \
             --disable-indexing \
             --output-path ./public \
             --transform-for-static-hosting \
-            --hosting-base-path image-playground-bridge
+            --hosting-base-path intelligence-bridge
 
           cat > ./public/index.html <<'INDEX'
           <!doctype html>
-          <meta http-equiv="refresh" content="0; url=/image-playground-bridge/documentation/imageplaygroundbridge/" />
-          <title>ImagePlaygroundBridge Documentation</title>
+          <meta http-equiv="refresh" content="0; url=/intelligence-bridge/documentation/intelligencebridge/" />
+          <title>IntelligenceBridge Documentation</title>
           INDEX
 
       - name: Upload Pages Artifact
