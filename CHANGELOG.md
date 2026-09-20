@@ -4,6 +4,13 @@ All notable changes to IntelligenceBridge are documented here.
 
 ## Unreleased
 
+### Added
+
+- Add a Foundation Models availability value that maps Apple's on-device model state to stable reasons and reports
+  unsupported platforms explicitly.
+- Re-export Apple's Foundation Models APIs on supported platforms so consumers can use `SystemLanguageModel`,
+  `LanguageModelSession`, `@Generable`, and `@Guide` directly.
+
 ### Changed
 
 - Rename the package, product, module, documentation, repository-facing links, logging subsystem, and canonical emoji to IntelligenceBridge 🧠 while preserving the Image Playground-specific public API.
