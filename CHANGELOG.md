@@ -4,6 +4,8 @@ All notable changes to IntelligenceBridge are documented here.
 
 ## Unreleased
 
+## 0.2.0 — 2026-09-20
+
 ### Added
 
 - Add a Foundation Models availability value that maps Apple's on-device model state to stable reasons and reports
