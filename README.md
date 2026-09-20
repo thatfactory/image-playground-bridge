@@ -11,7 +11,9 @@
 
 # IntelligenceBridge
 
-IntelligenceBridge is a focused Apple-platform integration layer for Apple intelligence capabilities such as Image Playground. It makes platform availability, framework integration, and presentation seams consistent without hiding Apple's frameworks or taking ownership of product prompts and persistence. 🧠
+IntelligenceBridge is a focused Apple-platform integration layer for Apple intelligence capabilities such as Image Playground
+and Foundation Models. It makes platform availability, framework integration, and presentation seams consistent without
+hiding Apple's frameworks or taking ownership of product prompts and persistence. 🧠
 
 Image Playground is the package's first capability. Its existing API centralizes availability checks, concept setup, SwiftUI presentation wiring, cancellation, and temporary result handling while leaving generated-media persistence to the host application.
 
@@ -31,6 +33,26 @@ content
 ```
 
 The presentation API is available on Apple platforms that support Image Playground. The package also compiles on tvOS so shared multiplatform application targets can resolve it, while ``ImagePlaygroundBridgeAvailability/current`` reports unavailable there.
+
+Foundation Models support preserves Apple's native API surface. Importing IntelligenceBridge on a supported platform also
+makes `SystemLanguageModel`, `LanguageModelSession`, `@Generable`, and `@Guide` available. Use the bridge availability value
+to decide whether to offer model-backed behavior while keeping prompts, sessions, generated values, and product policy in
+the host application.
+
+```swift
+import IntelligenceBridge
+
+guard FoundationModelBridgeAvailability.current == .available else {
+    return
+}
+
+let session = LanguageModelSession()
+```
+
+The availability mapping follows Apple's
+[`SystemLanguageModel.Availability`](https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel/availability-swift.enum).
+It distinguishes disabled Apple Intelligence, an ineligible device, a model that is not ready, and an unsupported platform.
+The package does not wrap `LanguageModelSession` or introduce a generic language-model abstraction.
 
 ## Documentation
 
